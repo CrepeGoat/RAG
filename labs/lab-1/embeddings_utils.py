@@ -121,8 +121,9 @@ def plot_multiclass_precision_recall(
         (l,) = plt.plot(recall[i], precision[i], lw=2)
         lines.append(l)
         labels.append(
-            "Precision-recall for class `{0}` (auprc = {1:0.2f})"
-            "".format(class_list[i], average_precision[i])
+            "Precision-recall for class `{0}` (auprc = {1:0.2f})" "".format(
+                class_list[i], average_precision[i]
+            )
         )
 
     fig = plt.gcf()

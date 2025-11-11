@@ -10,37 +10,31 @@ from langchain.callbacks import get_openai_callback
 
 
 def main():
-   
     st.set_page_config(page_title="Ask your PDF")
 
-     # Set a header logo with a PNG file
-    
+    # Set a header logo with a PNG file
 
     st.header("Ask your PDF 💬")
 
-    
-   
-    
-
     # upload file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
-    
+
     # check for file format, if not pdf show error message
     if pdf is not None:
-      pdf_reader = PdfReader(pdf)
-      text = ""
-      for page in pdf_reader.pages:
-        text += page.extract_text()
-    
-      # write the first 100 characters
-     
-      # show user input
-      user_question = st.text_input("Ask a question about your PDF:")
-      if user_question:
-        print(user_question)
-      
-        #upper case the question
-    
+        pdf_reader = PdfReader(pdf)
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text()
 
-if __name__ == '__main__':
+        # write the first 100 characters
+
+        # show user input
+        user_question = st.text_input("Ask a question about your PDF:")
+        if user_question:
+            print(user_question)
+
+            # upper case the question
+
+
+if __name__ == "__main__":
     main()

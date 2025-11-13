@@ -1,0 +1,1 @@
+streamlit run azure_search_hotels_ui.py

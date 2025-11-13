@@ -1,0 +1,13 @@
+jupyter
+python-dotenv
+numpy
+openai
+pandas
+transformers
+plotly
+matplotlib
+scikit-learn
+torch
+torchvision
+tiktoken
+scipy
